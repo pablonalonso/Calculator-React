@@ -1,38 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+:root{
+  --primary: rgb(75, 108, 110);
+  --secondary: rgb(70, 72, 145);
+  --dark: rgb(37, 44, 51);
+  --second-dark: rgb(19, 19, 24);
+  --ligth: rgb(201, 201, 201);
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: rgb(117, 116, 116);
+  font-family: Montserrat;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.calculator{
+  width: 100%;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px rgb(0, 0, 0);
+
+}
+
+.display{
+  padding: 16px 36px;
+  text-align: right;
+  background-color: var(--dark);
   color: white;
+  font-size: 26px;
+  font-weight: 300;
 }
 
-.App-link {
-  color: #61dafb;
+.display span{
+  color: rgb(136, 136, 136);
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button{
+  font-family: Montserrat;
+  border: none;
+  color: white;
+  background-color: rgb(62, 63, 78);
+  padding: 25px;
+  cursor: pointer;
+  transition: 0.4s;
+  font-size: 15px;
+}
+
+button:hover{
+  opacity: 0.8;
+}
+
+.operators{
+  display: flex;
+}
+
+.operators button{
+  flex: 1 1 0%;
+  background-color: var(--primary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.digits{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.digits button{
+  flex: 1 1 33.3%;
+  background-color: var(--dark);
+}
+
+.digits button:hover{
+  opacity: 0.9;
+}
+
+.blueButton{
+  background-color: rgb(49, 65, 45) !important; 
+}
+
+.greenButton{
+  background-color: rgb(33, 33, 36) !important;
+}
+
+.title{
+  display: inline-block;
+  width: 85%;
+  font-size: 22px !important;
+  text-align: left;
+  font-family: Dancing Script;
+  text-align: center;
+  font-weight: 200 !important;
+}
+
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.288);
+  border-radius: 50%;
 }
